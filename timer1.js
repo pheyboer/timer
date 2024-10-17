@@ -23,7 +23,7 @@ const beep = function() {
 };
 
 // Set beep for specified times and handle edge cases
-// Wrapped the setTimeout for...each loop in and if...else statement for handling conditions
+// Wrapped the for...each loop in an if...else statement for handling conditions
 // Edge cases for 0, negative numbers, and NaN
 
 if (timeSeconds.length === 0) {
@@ -35,7 +35,7 @@ if (timeSeconds.length === 0) {
     } else if (isNaN(interval)) {
       console.log(`${interval} is Not a Number. Please use a number`);
     } else {
-      const timeMiliseconds = interval * 1000;
+      const timeMiliseconds = interval * 1000; //convert seconds to miliseconds
       setTimeout(beep, timeMiliseconds);
     }
   });
