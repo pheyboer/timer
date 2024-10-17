@@ -8,16 +8,16 @@
 
 // Set interval times in seconds
 // Command line arugments are given as seconds. Convert to miliseconds
-// use setTimeout
+// use setTimeout with 2 arugments (callback, delay)
 
 // Take command line arugments
 const args = process.argv.slice(2);
 
-// Get interval from Command Line and map to numbers
+// Get interval from Command Line and map to integer
 
 const intervalSeconds = args.map(Number);
 
-// Function for beep sound
+// Function for beep sound. Writes out Beep!
 const beep = function() {
   process.stdout.write('Beep!\n');
 };
